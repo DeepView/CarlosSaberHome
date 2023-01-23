@@ -19,7 +19,9 @@
         </div>
         <div id="main-view">
             <div id="top-bar">
-                <img id="logo" src="img/icons/logo-icon.ico" alt="Carlos Saber">
+                <div id="logo-container">
+                    <img id="logo" src="img/icons/logo-icon.ico" alt="Carlos Saber">
+                </div>
                 <div id="link-container">
                     <a class="top-link" href="#button-tips-container">浏览器主页</a>
                     <a class="top-link" href="#about-container">关于我</a>
@@ -41,10 +43,26 @@
                 <div class="underline"></div>
                 <div id="button-content">
                     <p class="text-content">如果您需要一个浏览器主页，不妨试试将下面两个站点的其中之一，作为您的浏览器主页。</p>
-                    <input class="go-site" type="button" value="访问 AnySearch"
+                    <input id="anysearch" class="go-site" type="button" value="访问 AnySearch"
                         onclick="go('https:\\\\anysearch.carlos-saber.cn')" />
-                    <input class="go-site" type="button" value="访问 Lemon Home"
+                    <input id="lemon" class="go-site" type="button" value="访问 Lemon Home"
                         onclick="go('https:\\\\lemon.carlos-saber.cn')" />
+                </div>
+                <div id="thumbnail-container">
+                    <table id="thumbnail-table">
+                        <tr>
+                            <td align="right">
+                                <a href="https://anysearch.carlos-saber.cn" target="_blank">
+                                    <img id="thumbnail" src="img/index/anysearch.jpeg" alt="Site Thumbnail" />
+                                </a>
+                            </td>
+                            <td align="left">
+                                <a href="https://lemon.carlos-saber.cn" target="_blank">
+                                    <img id="thumbnail" src="img/index/lemon.jpeg" alt="Site Thumbnail" />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -57,13 +75,24 @@
                 <div id="about-content">
                     <p class="text-content">我是卡洛斯军刀，也就是Carlos Saber</p>
                     <p class="text-content">是这个网站的站长，同时我也是一位C#软件开发人员</p>
-                    <p class="text-content">平时喜欢看书读书，是一个刨根问底的人</p>
-                    <p class="text-content">懒癌、拖延症、强迫症晚期患者</p>
-                    <p class="text-content">青春时代从校园步入社会，已经超过七年了</p>
+                    <p class="text-content">平时喜欢看书读书，写作，是一个刨根问底的人，脑子里有数不清的疑问</p>
+                    <p class="text-content">动漫狂、懒癌、拖延症、强迫症晚期患者</p>
+                    <p class="text-content">青春时代，从校园毕业到步入社会，已经超过六年了</p>
                     <p class="text-content">现在热衷于软件开发和Web前端</p>
                     <p class="text-content">还喜欢打游戏，特别喜欢在Xbox Series平台玩赛车类游戏</p>
                     <p class="text-content">如今，单身待解救</p>
                     <p class="text-content">我将带着自己的理想，继续前行</p>
+                </div>
+                <div id="home-link-container">
+                    <a href="https://github.com/DeepView" target="_blank">
+                        <img class="home-link" src="img/icons/bili.png" alt="Bilibili" />
+                    </a>
+                    <a href="https://space.bilibili.com/25192681" target="_blank">
+                        <img class="home-link" src="img/icons/github.png" alt="Github" />
+                    </a>
+                    <a href="https://www.zhihu.com/people/xuan-mo-yu-sheng-yan-78" target="_blank">
+                        <img class="home-link" src="img/icons/zhihu.png" alt="Zhihu" />
+                    </a>
                 </div>
             </div>
             <br /><br />

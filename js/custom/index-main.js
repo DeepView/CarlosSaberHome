@@ -10,3 +10,7 @@ function showFooter() {
 function go(url) {
     window.open(url);
 }
+
+function changeImg(url) {
+    $('#thumbnail').attr('src', url);
+}
