@@ -8,5 +8,5 @@ function showFooter() {
 }
 
 function go(url) {
-    window.location.href = url;
+    window.open(url);
 }

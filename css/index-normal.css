@@ -6,51 +6,85 @@
     --rgba-white-a025: rgba(255, 255, 255, 0.25);
     --rgba-white-a075: rgba(255, 255, 255, 0.75);
     --rgba-white-a100: rgba(255, 255, 255, 1.0);
-    --rgba-green-a050: rgba(20, 157, 199, 0.5);
+    --rgba-blue-a050: rgba(20, 157, 199, 0.5);
+    --rgba-blue-a100: rgba(20, 157, 199, 1.0);
     /*css-block-sataement(alignment)*/
     --min-size-pixel: 0px;
     --size-pixel-p50: 50px;
     --max-size-percentage: 100%;
     --absolute-position: absolute;
+    --align-left-half: translateX(-50%);
     /*css-block-statement(effect)*/
     --text-shadow-black: 4px 4px 8px rgba(0, 0, 0, 0.5);
     --box-shadow-black: 0 0 10px 5px rgba(0, 0, 0, 0.25);
     --box-backdrop-filter: saturate(100%) blur(5px);
     --transition-sec: 0.25s;
+    --content-font-family: -apple-system, BlinkMacSystemFont;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
 }
 
 body,
 #main-view {
     background-color: var(--rgba-grey-a100);
+    margin: var(--min-size-pixel);
+    padding: var(--min-size-pixel);
     top: var(--min-size-pixel);
     left: var(--min-size-pixel);
     width: var(--max-size-percentage);
-    font-family: -apple-system, BlinkMacSystemFont;
+    font-family: var(--content-font-family);
 }
 
 #main-view {
-    background-color: var(--rgba-grey-a100);
     background-image: url('../img/index/main-view.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    width: var(--max-size-percentage);
-    height: var(--max-size-percentage);
-    margin: var(--min-size-pixel);
-    position: var(--absolute-position);
+    height: 100vh;
+    position: relative;
 }
 
 #top-bar {
     width: var(--max-size-percentage);
     height: var(--size-pixel-p50);
     top: var(--min-size-pixel);
-    position: var(--absolute-position);
-    background-color: var(--rgba-grey-a075);
+    position: relative;
+    background-color: var(--rgba-white-a025);
+    backdrop-filter: var(--box-backdrop-filter);
 }
 
 #logo {
-    width: calc(330px / 3);
+    width: calc(150px / 3);
     height: calc(150px / 3);
+    float: left;
+}
+
+#link-container {
+    float: right;
+    line-height: var(--size-pixel-p50);
+    background-color: var(--rgba-blue-a050);
+    transition: var(--transition-sec);
+}
+
+#link-container:hover {
+    background-color: var(--rgba-grey-a050);
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-link {
+    color: var(--rgba-white-a100);
+    margin: 20px;
+    transition: var(--transition-sec);
+}
+
+.top-link:hover {
+    color: var(--rgba-blue-a100);
 }
 
 #title {
@@ -58,17 +92,74 @@ body,
     font-size: var(--size-pixel-p50);
     text-align: center;
     text-shadow: var(--text-shadow-black);
-    position: var(--absolute-position);
+    position: relative;
     top: calc(var(--size-pixel-p50) * 3);
+    left: calc(var(--max-size-percentage) / 2);
+    transform: var(--align-left-half);
+}
+
+#scroll-tips-container {
+    position: absolute;
+    bottom: var(--size-pixel-p50);
+    color: var(--rgba-white-a100);
     left: calc(var(--max-size-percentage) / 2);
     transform: translateX(-50%);
 }
 
-#button-container {
-    position: var(--absolute-position);
-    top: calc(var(--size-pixel-p50) * 6);
+#scroll-tips-img {
+    position: relative;
+    top: 15px;
+    width: 48px;
+    height: 48px;
     left: calc(var(--max-size-percentage) / 2);
     transform: translateX(-50%);
+}
+
+#scroll-tips-text {
+    text-shadow: var(--text-shadow-black)
+}
+
+#button-container {
+    background-color: var(--rgba-white-a100);
+    position: relative;
+    height: calc(var(--size-pixel-p50) * 6);
+    margin: var(--min-size-pixel);
+    padding: var(--min-size-pixel);
+}
+
+#button-tips-container {
+    position: relative;
+    text-align: center;
+}
+
+.sub-title {
+    position: relative;
+    margin: var(--min-size-pixel);
+    font-weight: 600;
+    font-size: 32px;
+    height: 36px;
+}
+
+.title-block {
+    top: var(--size-pixel-p50);
+    position: relative;
+}
+
+.underline {
+    position: relative;
+    left: calc(var(--max-size-percentage) / 2);
+    top: calc(var(--size-pixel-p50) + 15px);
+    width: var(--size-pixel-p50);
+    height: 3px;
+    background-color: var(--rgba-blue-a100);
+    transform: var(--align-left-half);
+}
+
+#button-content {
+    left: calc(var(--max-size-percentage) / 2);
+    transform: var(--align-left-half);
+    position: relative;
+    top: calc(var(--size-pixel-p50) * 2);
 }
 
 .go-site {
@@ -78,7 +169,7 @@ body,
     border: var(--min-size-pixel);
     border-radius: calc(var(--size-pixel-p50) / 2);
     margin: calc(var(--size-pixel-p50) / 2);
-    background-color: var(--rgba-green-a050);
+    background-color: var(--rgba-blue-a100);
     backdrop-filter: var(--box-backdrop-filter);
     color: var(--rgba-white-a100);
     font-size: calc(var(--size-pixel-p50) / 3.5);
@@ -91,19 +182,46 @@ body,
 }
 
 #footer-container {
+    position: relative;
+    bottom: var(--min-size-pixel);
+    top: var(--size-pixel-p50);
+    left: var(--min-size-pixel);
+    background-color: var(--rgba-grey-a050);
+    backdrop-filter: var(--box-backdrop-filter);
+    height: 40px;
+    width: var(--max-size-percentage);
+    border: var(--min-size-pixel);
+}
+
+#copyrights {
     color: var(--rgba-white-a100);
     text-align: center;
     text-decoration: none;
     font-size: calc(var(--size-pixel-p50) / 4);
-    bottom: calc(var(--size-pixel-p50) / 5);
-    position: fixed;
-    left: calc(var(--max-size-percentage) / 2);
-    transform: translateX(-50%);
-    background-color: var(--rgba-white-a025);
+    margin: var(--min-size-pixel);
+    line-height: 40px;
+}
+
+#content-container {
+    position: relative;
     backdrop-filter: var(--box-backdrop-filter);
-    height: 20px;
-    width: calc(var(--size-pixel-p50) * 2.5);
-    border: var(--min-size-pixel);
-    border-radius: 30px;
-    display: table;
+    margin: var(--min-size-pixel);
+}
+
+#about-container {
+    position: relative;
+    background-color: var(--rgba-grey-a100);
+    margin-bottom: var(--size-pixel-p50);
+    color: var(--rgba-white-a100);
+    text-align: center;
+}
+
+#about-content {
+    position: relative;
+    top: calc(var(--size-pixel-p50) * 2);
+}
+
+.text-content {
+    text-align: center;
+    font-size: 13px;
 }
