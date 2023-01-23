@@ -47,6 +47,25 @@ body,
     position: relative;
 }
 
+#top-button-container {
+    position: fixed;
+    background-color: var(--rgba-blue-a050);
+    backdrop-filter: var(--box-backdrop-filter);
+    bottom: calc(var(--size-pixel-p50) / 2);
+    right: calc(var(--size-pixel-p50) / 2);
+    width: var(--size-pixel-p50);
+    height: var(--size-pixel-p50);
+    border-radius: calc(var(--size-pixel-p50) / 2);
+    transform: rotate(180deg);
+    z-index: 1024;
+}
+
+#top-button-img {
+    width: var(--size-pixel-p50);
+    height: var(--size-pixel-p50);
+    transform: scale(0.6);
+}
+
 #top-bar {
     width: var(--max-size-percentage);
     height: var(--size-pixel-p50);
