@@ -290,3 +290,53 @@ a {
     text-align: center;
     font-size: 13px;
 }
+
+#mail-container {
+    background-color: var(--rgba-white-a100);
+    position: relative;
+    top: var(--size-pixel-p50);
+    width: var(--max-size-percentage);
+    text-align: center;
+    height: calc(var(--size-pixel-p50) * 11);
+}
+
+#mail-form-container {
+    position: relative;
+    top: calc(var(--size-pixel-p50) * 2);
+    width: 700px;
+    font-size: 14px;
+    float: center;
+    left: calc(var(--max-size-percentage) / 2);
+    transform: translateX(-50%);
+}
+
+#mail-addr,
+#mail-subject {
+    width: 600px;
+    height: calc(var(--size-pixel-p50) * 0.8);
+    padding: 20px;
+    border: 1px solid var(--rgba-grey-a100);
+    border-radius: 10px;
+    transition: var(--transition-sec);
+}
+
+#mail-content {
+    resize: none;
+    width: 600px;
+    height: calc(var(--size-pixel-p50) * 4);
+    padding: 20px;
+    border: 1px solid var(--rgba-grey-a100);
+    border-radius: 10px;
+    transition: var(--transition-sec);
+}
+
+#mail-addr:hover,
+#mail-subject:hover,
+#mail-content:hover {
+    border: 1px solid var(--rgba-blue-a100);
+}
+
+.mail-tablecell-algin {
+    text-align: center;
+    padding-right: 20px;
+}

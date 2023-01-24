@@ -25,6 +25,7 @@
                 <div id="link-container">
                     <a class="top-link" href="#button-tips-container">浏览器主页</a>
                     <a class="top-link" href="#about-container">关于我</a>
+                    <a class="top-link" href="#mail-container">联系我们</a>
                 </div>
             </div>
             <div>
@@ -95,8 +96,44 @@
                     </a>
                 </div>
             </div>
-            <br /><br />
-            <div id="footer-container"></div>
         </div>
+        <div id="mail-container">
+            <div class="title-block">
+                <p class="sub-title">联系我们</p>
+            </div>
+            <div class="underline"></div>
+            <div id="mail-form-container">
+                <form action="mail.php" method="post">
+                    <table>
+                        <tr>
+                            <td class="mail-tablecell-algin">邮箱</td>
+                            <td class="mail-tablecell-algin">
+                                <input type=" text" id="mail-addr" name="from" value="" placeholder="填写您的邮箱地址" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mail-tablecell-algin">主题</td>
+                            <td class="mail-tablecell-algin">
+                                <input type="text" id="mail-subject" name="subject" placeholder="填写您需要反馈内容的主题" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mail-tablecell-algin">内容</td>
+                            <td class="mail-tablecell-algin">
+                                <textarea name="Content" id="mail-content" name="msg" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="mail-tablecell-algin">
+                                <input type="submit" id="mail-send" class="go-site" value="提交反馈" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <br /><br />
+        <div id="footer-container"></div>
     </body>
 </html>
