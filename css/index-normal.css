@@ -104,15 +104,19 @@ body,
 
 a {
     text-decoration: none;
+    transition: var(--transition-sec);
 }
 
 .top-link {
     color: var(--rgba-white-a100);
     margin: 20px;
-    transition: var(--transition-sec);
 }
 
-.top-link:hover {
+.white-bgcolor-link {
+    color: black;
+}
+
+a:hover {
     color: var(--rgba-blue-a100);
 }
 
@@ -291,7 +295,27 @@ a {
     font-size: 13px;
 }
 
-#mail-container {
+#contact-container {
+    background-color: var(--rgba-white-a100);
+    position: relative;
+    top: var(--size-pixel-p50);
+    width: var(--max-size-percentage);
+    text-align: center;
+    height: calc(var(--size-pixel-p50) * 5);
+}
+
+#contact-info-container {
+    background-color: var(--rgba-white-a100);
+    position: relative;
+    top: calc(var(--size-pixel-p50) * 2);
+    width: var(--max-size-percentage);
+    text-align: center;
+    font-size: 13px;
+    /* height: calc(var(--size-pixel-p50) * 3); */
+}
+
+/*mail-container-css:begin*/
+/* #mail-container {
     background-color: var(--rgba-white-a100);
     position: relative;
     top: var(--size-pixel-p50);
@@ -339,4 +363,5 @@ a {
 .mail-tablecell-algin {
     text-align: center;
     padding-right: 20px;
-}
+} */
+/*mail-container-css:end*/
